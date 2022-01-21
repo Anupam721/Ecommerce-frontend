@@ -9,9 +9,9 @@ export const signup = user => {
         headers: {
             Accept: 'application/json',
             "Access-Control-Allow-Origin": "*",
-            'Content-Type': 'applicaton/json'
+            'Content-Type': 'application/json'
         },
-        body:user
+        body:JSON.stringify(user)
     })
     .then(response => {
         return response.json();
@@ -24,7 +24,7 @@ export const signin = user => {
         method: 'POST',
         headers: {
             Accept: 'application/json',
-            'Content-Type': 'applicaton/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(user)
     })
